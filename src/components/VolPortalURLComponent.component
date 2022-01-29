@@ -1,0 +1,14 @@
+<!--
+ - Created by Baird on 5/17/2021.
+ -->
+
+<apex:component id="VolPortalURLComponent" controller="VolPortalURLComponent" access="global">
+    <apex:attribute name="SiteName2" description="The name of the Site that hosts the desired page."
+                    type="String" assignTo="{!SiteName}"/>
+    <apex:attribute name="VolToken" description="Volunteer Token"
+                    type="String" assignTo="{!VToken}"/>
+    <apex:attribute name="PersonId" description="Id of the recipient record"
+                    type="String" assignTo="{!RecipId}"/>
+    <apex:outputLink value="{!SiteURL}">Your Personal Volunteer Portal</apex:outputLink>
+    <br/>
+</apex:component>

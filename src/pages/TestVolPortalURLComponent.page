@@ -1,0 +1,8 @@
+<!--
+ - Created by Baird on 5/17/2021.
+ -->
+
+<apex:page id="TestVolPortalURLComponent">
+    <c:VolPortalURLComponent SiteName2="SignUp" PersonId="0035000002nqAHT"
+             VolToken="4d7ef306a9a028186ffeddbc7d7cf68d0f02c5add34583cd9fbf3e29266e3256"/>
+</apex:page>

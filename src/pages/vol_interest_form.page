@@ -1,0 +1,78 @@
+<!--
+ - Created by Baird on 5/9/2021, for EllerbeCreek deployment
+ -->
+<apex:page standardController="Contact" extensions="Vol_Interest_Form_Controller" showHeader="false"
+           standardStylesheets="false">
+    <apex:stylesheet value="{!$Resource.wg_styles}"/>
+
+    <body bgcolor="#dce9f7">
+    <apex:form >
+        <!--<p align="left"><apex:image url="{!$Resource.HeaderForVolInterestForm}" width="1057" height="123"/></p>-->
+
+        <apex:outputpanel id="pContactInfo">
+            <apex:messages style="color: #red;" />
+
+            <table cellpadding="10" border="0">
+
+                <tr>
+                    <td width="100px" align="left" valign="top"><font face="georgia" ><b><apex:outputLabel value="Email (required)" /></b></font></td>
+                    <td align="left" valign="top"><apex:inputField value="{!contact.Email}" required="true" /></td>
+                    <td width="100px" align="left" valign="top"><font face="georgia"><b>
+                                <apex:outputLabel value="First Name (required)" /></b></font></td>
+                    <td align="left" valign="top"><apex:inputField value="{!contact.FirstName}"/></td>
+                </tr>
+
+                <tr>
+                    <td width="100px" align="left" valign="top"><font face="georgia" ><b><apex:outputLabel value="Last Name (required)"  /></b></font></td>
+                    <td align="left" valign="top"><apex:inputField value="{!contact.LastName}"/></td>
+                    <td width="100px" align="left" valign="top"><font face="georgia" ><b><apex:outputLabel value="Zip Code (required)" /></b></font></td>
+                    <td align="left" valign="top"><apex:inputField value="{!contact.mailingPostalcode}" required="true" /></td>
+                </tr>
+
+                <tr>
+                    <td width="100px" align="left" valign="top"><font face="georgia" ><b><apex:outputLabel value="Phone" /></b></font></td>
+                    <td align="left" valign="top"><apex:inputField value="{!contact.Phone}" /></td>
+                    <td width="100px" align="left" valign="top"><font face="georgia" ><b><apex:outputLabel value="Street Address" /></b></font></td>
+                    <td align="left" valign="top"><apex:inputField value="{!contact.mailingStreet}" /></td>
+                </tr>
+
+                <tr>
+                    <td width="100px" align="left" valign="top"><font face="georgia"><b><apex:outputLabel value="City" /></b></font></td>
+                    <td align="left" valign="top"><apex:inputField value="{!contact.mailingCity}" /></td>
+                    <td width="100px" align="left" valign="top"><font face="georgia"><b><apex:outputLabel value="State" /></b></font></td>
+                    <td align="left" valign="top"><apex:inputField value="{!contact.mailingState}"/></td>
+                </tr>
+
+            </table>
+
+            <h1 class="page_header">Tell us about your volunteer interests and skills.<br/></h1>
+
+            <table cellpadding="10" border="0">
+
+                <tr>
+                    <td width="100px" align="left" valign="top"><font face="georgia" ><b><apex:outputLabel value="What are your volunteer interests?" /></b></font></td>
+                    <td align="left" valign="top"><apex:selectCheckboxes value="{!interestselection}"  layout="pageDirection">
+                            <apex:selectOptions value="{!interests}"/>
+                        </apex:selectCheckboxes></td>
+                    <td width="100px" align="left" valign="top"><font face="georgia" ><b><apex:outputLabel value="What volunteer skills would you like to offer?" /></b></font></td>
+                    <td align="left" valign="top"><apex:selectCheckboxes value="{!skillselection}"  layout="pageDirection">
+                            <apex:selectOptions value="{!skills}"/>
+                        </apex:selectCheckboxes></td>
+                </tr>
+
+            </table>
+            <br/>
+
+        </apex:outputPanel>
+
+        <apex:outputPanel id="bottombuttons">
+            <div style="margin-left: 10px;">
+                <apex:commandButton action="{!submit}" value="Submit"/>
+            </div>
+        </apex:outputPanel>
+
+    </apex:form>
+
+    </body>
+
+</apex:page>

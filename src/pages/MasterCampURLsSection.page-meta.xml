@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>45.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <label>MasterCampURLsSection</label>
+    <packageVersions>
+        <majorNumber>6</majorNumber>
+        <minorNumber>2102040000</minorNumber>
+        <namespace>CnP_IaaS</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>9</majorNumber>
+        <minorNumber>2104250027</minorNumber>
+        <namespace>CnP_PaaS</namespace>
+    </packageVersions>
+    <packageVersions>
+        <majorNumber>1</majorNumber>
+        <minorNumber>0</minorNumber>
+        <namespace>CnP_PaaS_Bridge</namespace>
+    </packageVersions>
+</ApexPage>

@@ -1,0 +1,15 @@
+<!--
+ - Created by Baird on 5/9/2021 for Ellerbe Creek deployment.
+ Otherwise deprecated, supeseded by Volunteer Portal.
+ -->
+<apex:page standardController="Contact" extensions="Vol_Interest_Form_Controller" showHeader="false"
+           standardStylesheets="false">
+    <apex:stylesheet value="{!$Resource.wg_styles}"/>
+    <body bgcolor="#dce9f7">
+    <apex:form >
+        <p><font face="georgia"><b>Thank you for letting us know about your interest in volunteering!  We will be back in touch as soon as we have a suitable event.</b></font></p>
+
+
+    </apex:form>
+    </body>
+</apex:page>
